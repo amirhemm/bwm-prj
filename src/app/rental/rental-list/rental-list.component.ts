@@ -1,4 +1,4 @@
-import { Rental } from './../shared/rental.model';
+import { Rental } from '../shared/rental.model';
 import { Component, OnInit } from '@angular/core';
 import { RentalService } from '../shared/rental.service';
 
