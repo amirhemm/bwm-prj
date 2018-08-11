@@ -2,6 +2,12 @@ const express = require('express');
 const router = express.Router();
 const Rental = require('../models/rental');
 
+const UserCtrl = require('../controllers/user');
+
+router.get('/secret',UserCtrl.authMiddleware, (req, res) => {
+  res.json({'secret': true});
+});
+
 router.get('', (req, res) => {
   Rental.find({}, (err, foundRentals) => {
 
@@ -14,7 +20,7 @@ router.get('/:id', (req, res) => {
   Rental.findById(retnalId, (err, fountRental) => {
     if(err) {
 
-      res.status(422).send({errors: [{title: 'Rental Error!', detail: 'Could not find rental!'}]})
+      res.status(422).send({errors: [{title: 'Rental Error!', detail: 'Could not find rental!'}]});
     }
     res.json(fountRental);
   });
