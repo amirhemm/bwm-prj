@@ -12,7 +12,7 @@ const rentalRoutes = require('./routes/rentals'),
 mongoose.Promise = global.Promise;
 mongoose.connect(config.DB_URI , { useNewUrlParser: true }).then(() => {
   const fakeDb = new FakeDb();
-  fakeDb.seedDb();
+  // fakeDb.seedDb();
 });
 
 const app = express();
