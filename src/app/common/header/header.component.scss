@@ -19,6 +19,11 @@
   }
 
 
+  .clickable {
+    &:hover {
+      cursor: pointer;
+    }
+  }
   .nav-item {
     font-size: 14px;
   }
