@@ -6,7 +6,8 @@ const Rental = require('./models/rental');
 const FakeDb = require('./fake-db');
 
 const rentalRoutes = require('./routes/rentals'),
-      userRoutes = require('./routes/users');
+      userRoutes = require('./routes/users'),
+      bookingsRoutes = require('./routes/bookings');
 
 
 mongoose.Promise = global.Promise;
@@ -21,6 +22,7 @@ app.use(bodyParser.json());
 
 app.use('/api/v1/rentals', rentalRoutes);
 app.use('/api/v1/users', userRoutes);
+app.use('/api/v1/bookings', bookingsRoutes);
 
 
 const PORT = process.env.PORT || 3001;
