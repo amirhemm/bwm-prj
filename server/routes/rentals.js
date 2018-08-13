@@ -44,7 +44,6 @@ router.post('', authMiddleware, (req, res) => {
   const {title, city, street, category, image, bedrooms, shared, description, dailyRate } = req.body;
 
   const rental = new Rental({
-    user,
     title,
     city,
     street,
