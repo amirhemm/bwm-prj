@@ -3,11 +3,11 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import * as moment from 'moment';
 import { DaterangePickerComponent } from 'ng2-daterangepicker';
 import { Booking } from '../../../booking/shared/booking.model';
-import { BookingService } from './../../../booking/shared/booking.service';
-import { HelperService } from './../../../common/service/helper.service';
+import { BookingService } from '../../../booking/shared/booking.service';
+import { HelperService } from '../../../common/service/helper.service';
 import { ToastrService } from 'ngx-toastr';
-import { AuthService } from './../../../auth/shared/auth.service';
-import { Rental } from './../../shared/rental.model';
+import { AuthService } from '../../../auth/shared/auth.service';
+import { Rental } from '../../shared/rental.model';
 
 @Component({
   encapsulation: ViewEncapsulation.None,

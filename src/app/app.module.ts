@@ -7,8 +7,11 @@ import { ToastrModule } from 'ngx-toastr';
 
 import { AuthModule } from './auth/auth.module';
 import { RentalModule } from './rental/rental.module';
+import { ManageModule } from './manage/manage.module';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './common/header/header.component';
+
 
 
 const routes: Routes = [
@@ -25,6 +28,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     NgbModule.forRoot(),
     RentalModule,
+    ManageModule,
     AuthModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot()

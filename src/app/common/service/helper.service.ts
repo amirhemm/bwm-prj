@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import * as moment from 'moment';
-import { Booking } from './../../booking/shared/booking.model';
+import { Booking } from '../../booking/shared/booking.model';
 
 
 @Injectable()
