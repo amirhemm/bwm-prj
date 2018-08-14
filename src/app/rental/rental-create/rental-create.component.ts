@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Rental } from './../shared/rental.model';
-import { RentalService } from './../shared/rental.service';
+import { Rental } from '../shared/rental.model';
+import { RentalService } from '../shared/rental.service';
 import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
