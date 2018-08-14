@@ -1,10 +1,15 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" routerLink="/rentals">BookWithMe</a>
-  <form class="form-inline">
-    <input class="form-control mr-sm-2 bwm-search" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn-bwm-search btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <div class="form-inline">
+    <input
+      #city class="form-control mr-sm-2 bwm-search"
+      type="search"
+      placeholder="Search"
+      aria-label="Search"
+      (keyup.enter)="search(city.value)">
+    <button (click)="search(city.value)" type="button" class="btn-bwm-search btn btn-outline-success my-2 my-sm-0">Search</button>
+  </div>
+  <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div  class="collapse navbar-collapse" id="navbarNav">
@@ -21,6 +26,16 @@
         <li class="nav-item clickable">
           <a class="nav-link">{{authService.getUsername()}}</a>
         </li>
+        <div class="nav-item dropdown clickable">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Owner Section
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" routerLink="/rentals/new">Create Rental</a>
+            <a class="dropdown-item" routerLink="/manage/rentals">Manage Rentals</a>
+            <a class="dropdown-item" routerLink="/manage/bookings">Manage Bookings</a>
+          </div>
+          </div>
         <li class="nav-item clickable">
           <a class="nav-link" (click)="logout()">Logout</a>
         </li>

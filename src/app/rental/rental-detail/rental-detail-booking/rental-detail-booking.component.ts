@@ -6,6 +6,7 @@ import { Booking } from '../../../booking/shared/booking.model';
 import { BookingService } from './../../../booking/shared/booking.service';
 import { HelperService } from './../../../common/service/helper.service';
 import { ToastrService } from 'ngx-toastr';
+import { AuthService } from './../../../auth/shared/auth.service';
 import { Rental } from './../../shared/rental.model';
 
 @Component({
@@ -38,7 +39,8 @@ export class RentalDetailBookingComponent implements OnInit {
   constructor(private helperService: HelperService,
               private modalService: NgbModal,
               private bookingService: BookingService,
-              private toastr: ToastrService) { }
+              private toastr: ToastrService,
+              public auth: AuthService) { }
 
   ngOnInit() {
     this.newBooking = new Booking();
