@@ -39,5 +39,6 @@ testem.log
 Thumbs.db
 
 /server/config/dev.js
-/server/.vscode
+.vscode
+/server/node_modules
 .vscode/launch.json
